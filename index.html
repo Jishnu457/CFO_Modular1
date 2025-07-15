@@ -1271,6 +1271,12 @@
                     this.elements.sidebar.classList.add('minimized');
                     this.elements.mainWrapper.classList.add('minimized-sidebar');
                     this.elements.toggleSidebar.textContent = '≫';
+                    this.elements.sendBtn.classList.remove('only-arrow');
+                } else {
+                    this.elements.sidebar.classList.remove('minimized');
+                    this.elements.mainWrapper.classList.remove('minimized-sidebar');
+                    this.elements.toggleSidebar.textContent = '≪';
+                    this.elements.sendBtn.classList.add('only-arrow');
                 }
             }
 
@@ -1281,10 +1287,14 @@
                     this.elements.sidebar.classList.add('minimized');
                     this.elements.mainWrapper.classList.add('minimized-sidebar');
                     this.elements.toggleSidebar.textContent = '≫';
+                    // Show text on send button
+                    this.elements.sendBtn.classList.remove('only-arrow');
                 } else {
                     this.elements.sidebar.classList.remove('minimized');
                     this.elements.mainWrapper.classList.remove('minimized-sidebar');
                     this.elements.toggleSidebar.textContent = '≪';
+                    // Hide text, show only icon
+                    this.elements.sendBtn.classList.add('only-arrow');
                 }
             }
 
